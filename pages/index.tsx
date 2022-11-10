@@ -1,34 +1,44 @@
+import React, { useState } from 'react'
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Button from '@mui/material/Button'
-import DeleteIcon from '@mui/icons-material/Delete'
+import Counter from '../components/Counter'
 
 import { styled } from '@mui/system'
 
-const ContentWrapper = styled('div')({
-  marginTop: '3em'
-})
-
 export default function Home() {
+
+  const ContentWrapper = styled('div')({
+    marginTop: '3em',
+    textAlign: 'center'
+  })
+
+  let [ counterVisible, setCounterVisible ] = useState(false);
+  const toggleCounterVisible = () => {
+    setCounterVisible(!counterVisible)
+  }
+
   return (
     <div className={styles.container}>
       <Head>
-        <title>NextJS TypeScript practice</title>
+        <title>NextJS TypeScript MUI practice</title>
         <meta name="description" content="Practice project to learn NextJS with TypeScript" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          NextJs / TypeScript practice
+          NextJs / TypeScript / Material UI
         </h1>
+        <h2>
+          practice project
+        </h2>
         <ContentWrapper>
-          <Button>Yup, this trash code works!<DeleteIcon /></Button>
+          <Button onClick={toggleCounterVisible}>
+            {counterVisible ? "Hide" : "Display"} counter example
+          </Button>
+          {counterVisible && <Counter />}
         </ContentWrapper>
-        <div>
-          
-        </div>
       </main>
     </div>
   )
