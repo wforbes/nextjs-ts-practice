@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
-import { PageWrapper, TitleBox, PageTitle, PageSubtitle } from '../styles'
+import { PageWrapper } from '../styles'
+
+import { HomeBanner } from '../components/Home'
+
 import Button from '@mui/material/Button'
 import Counter from '../components/Counter'
 
@@ -12,15 +15,7 @@ export default function Home() {
 
   return (
     <PageWrapper>
-      <TitleBox>
-        <PageTitle>
-          Practice Project
-        </PageTitle>
-        <PageSubtitle>
-          Next.js - Material UI - TypeScript
-        </PageSubtitle>
-      </TitleBox>
-    
+      <HomeBanner />
       <Button onClick={toggleCounterVisible}>
         {counterVisible ? "Hide" : "Display"} counter example
       </Button>
