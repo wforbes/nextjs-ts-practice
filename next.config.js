@@ -2,6 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  /* //just playing with redirects
   async redirects() {
     return [
       {
@@ -11,7 +12,7 @@ const nextConfig = {
         basePath: false
       }
     ]
-  }
+  }*/
 }
 
 module.exports = nextConfig
