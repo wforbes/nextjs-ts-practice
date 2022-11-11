@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { PageWrapper } from '../styles'
-
 import { HomeBanner } from '../components/Home'
 
 import Button from '@mui/material/Button'
