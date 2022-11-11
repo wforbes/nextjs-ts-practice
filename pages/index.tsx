@@ -19,13 +19,14 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
-        <h1 className={styles.title}>
-          NextJs / TypeScript / Material UI
-        </h1>
-        <h2>
-          practice project
-        </h2>
         <ContentWrapper>
+          <h1 className={styles.title}>
+            NextJs / TypeScript / Material UI
+          </h1>
+          <h2>
+            practice project
+          </h2>
+        
           <Button onClick={toggleCounterVisible}>
             {counterVisible ? "Hide" : "Display"} counter example
           </Button>
