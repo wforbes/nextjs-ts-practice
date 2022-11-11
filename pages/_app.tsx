@@ -11,6 +11,7 @@ import '@fontsource/roboto/700.css';
 import createEmotionCache from '../utils/createEmotionCache';
 import lightThemeOptions from '../styles/theme/lightThemeOptions';
 import '../styles/globals.css';
+import MainLayout from '../components/MainLayout'
 
 import { store } from '../store'
 import { Provider } from 'react-redux'
@@ -31,7 +32,9 @@ const MyApp: React.FunctionComponent<MyAppProps> = (props) => {
       <ThemeProvider theme={lightTheme}>
         <CssBaseline />
         <Provider store={store}>
-          <Component {...pageProps} />
+          <MainLayout>
+            <Component {...pageProps} />
+          </MainLayout>
         </Provider>
       </ThemeProvider>
     </CacheProvider>
