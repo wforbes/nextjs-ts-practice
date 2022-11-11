@@ -5,7 +5,7 @@ const nextConfig = {
     path: '',
   },
   assetPrefix: '/nextjs-ts-practice/',
-  basePath: '/nextjs-ts-practice/'
+  basePath: '/nextjs-ts-practice'
 }
 
 export default nextConfig
