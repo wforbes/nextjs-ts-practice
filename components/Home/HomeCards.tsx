@@ -75,7 +75,6 @@ export default function HomeCards() {
 					</CardContent>
 					<CardActions>
 						<Button href={card.viewUrl} size="small">View</Button>
-						<Button size="small">{card.sourceUrl}</Button>
 					</CardActions>
 				</HomeCard>
 				</Grid>
