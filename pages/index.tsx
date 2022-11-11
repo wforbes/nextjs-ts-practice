@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Button from '@mui/material/Button'
 import Counter from '../components/Counter'
@@ -20,13 +19,6 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
-      <Head>
-        <title>NextJS TypeScript MUI practice</title>
-        <meta name="description" content="Practice project to learn NextJS with TypeScript" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
         <h1 className={styles.title}>
           NextJs / TypeScript / Material UI
         </h1>
@@ -39,7 +31,6 @@ export default function Home() {
           </Button>
           {counterVisible && <Counter />}
         </ContentWrapper>
-      </main>
     </div>
   )
 }
