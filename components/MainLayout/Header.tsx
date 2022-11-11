@@ -1,5 +1,15 @@
 import { AppBar, Toolbar, Grid, Button } from '@mui/material'
 import ToolbarLogo from './ToolbarLogo'
+import styled from '@emotion/styled'
+
+const SignupButton = styled(Button)`
+	margin-right: 1rem;
+	color: white;
+`
+
+const LoginButton = styled(Button)`
+	color: white;
+`
 
 export default function Header() {
 	return (
@@ -10,12 +20,12 @@ export default function Header() {
 						<ToolbarLogo />
 					</Grid>
 					<Grid item xs={3} style={{ textAlign: "right"}}>
-						<Button variant="contained" color="secondary" style={{ marginRight: "1rem" }}>
+						<SignupButton variant="contained" color="secondary">
 							Sign Up
-						</Button>
-						<Button variant="text" style={{ color: "white" }}>
+						</SignupButton>
+						<LoginButton variant="text">
 							Login
-						</Button>
+						</LoginButton>
 					</Grid>
 				</Grid>
 			</Toolbar>
