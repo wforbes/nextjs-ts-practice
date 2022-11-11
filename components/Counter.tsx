@@ -55,7 +55,7 @@ export default function Counter() {
 						target='_blank'
 						rel="noreferrer"
 					>
-						Redux TypeScript Quickstart demo
+						Redux TypeScript Quickstart demo!
 					</a>.
 				</p>
 			</Box>
