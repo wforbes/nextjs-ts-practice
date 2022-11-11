@@ -4,7 +4,8 @@ const nextConfig = {
     loader: 'akamai',
     path: '',
   },
-  assetPrefix: './'
+  assetPrefix: './',
+  basePath: '/nextjs-ts-practice'
 }
 
 export default nextConfig
