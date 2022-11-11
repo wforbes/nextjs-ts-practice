@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 import { Box } from '@mui/material'
 
 export const TitleBox = styled(Box)({
@@ -10,7 +10,7 @@ export const PageWrapper = styled.div`
 	min-height: 70vh;
 `
 
-export const PageTitle = styled.h1`
+export const PageTitle = styled('h1')`
 	margin: 0;
 	line-height: 1.15;
 	font-size: 3rem;
