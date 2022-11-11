@@ -3,7 +3,7 @@ import ToolbarLogo from './ToolbarLogo'
 
 export default function Header() {
 	return (
-		<AppBar position="relative">
+		<AppBar position="sticky">
 			<Toolbar>
 				<Grid container direction="row">
 					<Grid item xs={9}>
