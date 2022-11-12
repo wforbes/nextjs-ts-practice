@@ -10,6 +10,7 @@ import Typography from '@mui/material/Typography'
 import styled from '@emotion/styled';
 import Image from 'next/image'
 import { PageSubtitle } from '../../styles'
+import Link from 'next/link'
 
 const cards = [
 	{
@@ -21,7 +22,7 @@ const cards = [
 			url: '/redux_meme.jpg',
 			alt: 'watching the world burn when passing object to redux'
 		},
-		viewUrl: "redux"
+		viewUrl: "/redux"
 	},
 	{
 		id: 2,
@@ -33,7 +34,7 @@ const cards = [
 			alt: 'elmo chooses between regular styling and styled components, '+ 
 			'represented by fruit and sugar. Yes, that is sugar. I swear officer.'
 		},
-		viewUrl: "styled-components"
+		viewUrl: "/styled-components"
 	}
 ];
 
@@ -74,7 +75,9 @@ export default function HomeCards() {
 						</Typography>
 					</CardContent>
 					<CardActions>
-						<Button href={card.viewUrl} size="small">View</Button>
+						<Link href={card.viewUrl}>
+							<Button size="small">View</Button>
+						</Link>
 					</CardActions>
 				</HomeCard>
 				</Grid>
