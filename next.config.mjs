@@ -15,7 +15,7 @@ if (isGithubActions) {
 const nextConfig = {
   images: {
     loader: 'imgix',
-    path: 'wforbes.imgix.net'
+    path: 'https://wforbes.imgix.net'
   },
   assetPrefix,
   basePath
