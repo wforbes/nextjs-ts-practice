@@ -13,6 +13,8 @@ const getBasePath = () => {
 };
 
 export default function Layout({ children }: { children: ReactNode }) {
+  console.log(process.env);
+  
   return (
     <>
       <Head>
