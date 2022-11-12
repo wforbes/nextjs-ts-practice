@@ -16,29 +16,33 @@ import MainLayout from '../components/MainLayout'
 import { store } from '../store'
 import { Provider } from 'react-redux'
 
+
+
 interface MyAppProps extends AppProps {
-  emotionCache?: EmotionCache;
+	emotionCache?: EmotionCache;
 }
 
 const clientSideEmotionCache = createEmotionCache();
 
 const lightTheme = createTheme(lightThemeOptions);
 
-const MyApp: React.FunctionComponent<MyAppProps> = (props) => {
-  const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
 
-  return (
-    <CacheProvider value={emotionCache}>
-      <ThemeProvider theme={lightTheme}>
-        <CssBaseline />
-        <Provider store={store}>
-          <MainLayout>
-            <Component {...pageProps} />
-          </MainLayout>
-        </Provider>
-      </ThemeProvider>
-    </CacheProvider>
-  );
+
+const MyApp: React.FunctionComponent<MyAppProps> = (props) => {
+	const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
+
+	return (
+		<CacheProvider value={emotionCache}>
+			<ThemeProvider theme={lightTheme}>
+				<CssBaseline />
+				<Provider store={store}>
+					<MainLayout>
+						<Component {...pageProps} />
+					</MainLayout>
+				</Provider>
+			</ThemeProvider>
+		</CacheProvider>
+	);
 };
 
 export default MyApp;
