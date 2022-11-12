@@ -5,13 +5,20 @@ import { Main } from './styles'
 //import Footer from './footer'
 import { ReactNode } from 'react'
 
+const getBasePath = () => {
+  if (process.env.GITHUB_ACTIONS && process.env.GITHUB_REPOSITORY) {
+    return `/${process.env.GITHUB_REPOSITORY.replace(/.*?\//, '')}/`
+  }
+  return "";
+};
+
 export default function Layout({ children }: { children: ReactNode }) {
   return (
     <>
       <Head>
         <title>NextJS TypeScript MUI practice</title>
         <meta name="description" content="Practice project to learn NextJS with TypeScript" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href={`${getBasePath()}/favicon.ico`} />
       </Head>
       <Header />
       <Main>{children}</Main>
