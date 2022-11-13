@@ -1,7 +1,13 @@
 import React, { useState } from 'react'
 import { PageWrapper } from '../styles'
-import Button from '@mui/material/Button'
-import Counter from '../components/Counter'
+import { ReduxBanner, ReduxTabs } from '../components/Redux'
+import { Box } from '@mui/material'
+import styled from '@emotion/styled'
+
+const StyledBox = styled(Box)({
+	margin: '0 auto',
+	width: '80%'
+})
 
 export default function ReduxPage() {
 
@@ -12,10 +18,10 @@ export default function ReduxPage() {
 
 	return (
 		<PageWrapper>
-			<Button onClick={toggleCounterVisible}>
-				{counterVisible ? "Hide" : "Display"} counter example
-			</Button>
-			{counterVisible && <Counter />}
+			<ReduxBanner />
+			<StyledBox>
+				<ReduxTabs />
+			</StyledBox>
 		</PageWrapper>
 	)
 }
