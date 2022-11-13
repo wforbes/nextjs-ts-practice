@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 
-import { Box, Grid, Button } from '@mui/material'
+import { Box, IconButton, Button } from '@mui/material'
 import { CounterCard, CounterOutputRow, CounterControlRow, IncrementInput, CountOutput } from './styles'
-
+import { AddCircle, RemoveCircle } from '@mui/icons-material'
 import { useAppSelector, useAppDispatch } from '../../hooks'
 
 import {
@@ -39,23 +39,21 @@ export default function Counter() {
 			</Box>
 			<CounterCard>
 				<CounterOutputRow>
-					<Button
-						variant="outlined"
-						size="small"
+					<IconButton
+						size="large"
 						aria-label="Decrement value"
 						onClick={() => dispatch(decrement())}
 					>
-						-
-					</Button>
+						<RemoveCircle color="primary" />
+					</IconButton>
 					<CountOutput>{count}</CountOutput>
-					<Button
-						variant="outlined"
-						size="small"
+					<IconButton
+						size="large"
 						aria-label="Increment value"
 						onClick={() => dispatch(increment())}
 					>
-						+
-					</Button>
+						<AddCircle color="primary" />
+					</IconButton>
 				</CounterOutputRow>
 				<CounterControlRow>
 					<IncrementInput

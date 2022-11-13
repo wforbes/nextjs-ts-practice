@@ -34,7 +34,7 @@ export const IncrementInput = styled(TextField)({
 })
 
 export const CountOutput = styled('span')({
-	margin: '0 2em',
-	fontSize: '1.5em',
+	padding: '0 1em',
+	fontSize: '2em',
 	fontWeight: 'bolder'
 })
