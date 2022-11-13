@@ -34,7 +34,7 @@ const cards = [
 			alt: 'elmo chooses between regular styling and styled components, '+ 
 			'represented by fruit and sugar. Yes, that is sugar. I swear officer.'
 		},
-		viewUrl: "/styled-components"
+		viewUrl: "/styledComponents"
 	}
 ];
 
