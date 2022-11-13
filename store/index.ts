@@ -1,5 +1,5 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit'
-import counterReducer from './slices/counterSlice'
+import counterReducer from './counterSlice'
 
 export const store = configureStore({
 	reducer: {
@@ -8,11 +8,12 @@ export const store = configureStore({
 })
 
 // extract RootState type and Dispatch type to reference, like in hooks.ts
+
 export type RootState = ReturnType<typeof store.getState>
 export type AppDispatch = typeof store.dispatch
 export type AppThunk<ReturnType = void> = ThunkAction<
-  ReturnType,
-  RootState,
-  unknown,
-  Action<string>
+	ReturnType,
+	RootState,
+	unknown,
+	Action<string>
 >

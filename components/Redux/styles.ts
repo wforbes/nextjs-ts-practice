@@ -1,5 +1,9 @@
 import { styled } from '@mui/system'
-import { Card, Box, Grid, TextField } from '@mui/material'
+import { Card, Box, TextField } from '@mui/material'
+
+export const StyledLink = styled('a')(({ theme }) => ({
+	color: theme.palette.primary.main
+}))
 
 export const CounterCard = styled(Card)({
 	display: 'flex',

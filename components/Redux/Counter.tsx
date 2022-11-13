@@ -1,8 +1,4 @@
 import React, { useState } from 'react'
-
-import { Box, IconButton, Button } from '@mui/material'
-import { CounterCard, CounterOutputRow, CounterControlRow, IncrementInput, CountOutput } from './styles'
-import { AddCircle, RemoveCircle } from '@mui/icons-material'
 import { useAppSelector, useAppDispatch } from '../../hooks'
 
 import {
@@ -12,7 +8,21 @@ import {
 	incrementAsync,
 	incrementIfOdd,
 	selectCount
-} from '../../slices/counterSlice'
+} from '../../store/counterSlice'
+
+import Link from 'next/link'
+
+import { Box, IconButton, Button } from '@mui/material'
+import { AddCircle, RemoveCircle } from '@mui/icons-material'
+import {
+	StyledLink,
+	CounterCard,
+	CounterOutputRow,
+	CounterControlRow,
+	IncrementInput,
+	CountOutput
+} from './styles'
+
 
 export default function Counter() {
 	
@@ -28,13 +38,12 @@ export default function Counter() {
 				<h1>Redux Counter Example</h1>
 				<p>
 					The Counter component below comes from the&nbsp;
-					<a 
+					<Link
 						href='https://redux.js.org/tutorials/typescript-quick-start'
-						target='_blank'
-						rel="noreferrer"
+						passHref
 					>
-						Redux TypeScript Quickstart demo!
-					</a>.
+						<StyledLink>Redux TypeScript Quickstart demo!</StyledLink>
+					</Link>
 				</p>
 			</Box>
 			<CounterCard>
